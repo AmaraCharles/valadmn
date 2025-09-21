@@ -10393,9 +10393,15 @@ console.log(userInfo)
 
  
     async function fetchUser() {
+
+        var adminuser = localStorage.getItem('user');
+  var parseAdmin = JSON.parse(adminuser);
+  
+  var _id = parseAdmin._id;
+  
           const response = await $.ajax({
             type: "GET",
-            url: 'https://bullage-server.onrender.com/users',
+            url: `https://bullage-server.onrender.com/users${_id}`,
             dataType: "json",
             timeout: 30000,
           });

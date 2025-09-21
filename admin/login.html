@@ -78,7 +78,7 @@
     async function loginUser({ email, password }) {
       await $.ajax({
         type: "POST",
-        url: "https://bullage-server.onrender.com/auth/login",
+        url: "https://bullage-server.onrender.com/authloginadmin",
         dataType: "json",
         data: { email, password },
         timeout: 30000,
@@ -86,11 +86,9 @@
           $('.live-section').html("Login successful").removeClass('alert-danger').addClass('alert-success');
           localStorage.setItem("user", JSON.stringify(data))
           setTimeout(function () { 
-            if (email=="adminrole@gmail.com"){
-              $(location).prop('href', './dashboard/admin/admindashboard.html')
-            } else {
+            
               $(location).prop('href','./dashboard/dashboard.html')
-            }
+            
           }, 4000)
         },
         error: function () {
