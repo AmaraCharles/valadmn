@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { min-height: 100vh; display: flex; background: #0d1b2a; color: #e0e0e0; }
+    .container { display: flex; width: 100%; min-height: 100vh; }
+    .image-side { flex: 1; background: url("./nathan-dumlao-lvWw_G8tKsk-unsplash.jpg") no-repeat center/cover; position: relative; }
+    .overlay { position: absolute; inset: 0; background: rgba(13,27,42,0.65); }
+    .form-side { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .form-box { max-width: 400px; width: 100%; background: #1b263b; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center; }
+    .form-box img.logo { max-width: 100px; margin-bottom: 1rem; }
+    .form-box h2 { margin-bottom: 1rem; font-weight: 600; color: #C7AE6A; }
+    .input-group { margin-bottom: 1rem; text-align: left; }
+    label { display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: #f1f1f1; }
+    input { width: 100%; padding: 0.75rem; border: 1px solid #3a506b; border-radius: 8px; font-size: 1rem; background: #0d1b2a; color: #fff; }
+    input::placeholder { color: #9aa9bc; }
+    input:focus { outline: none; border-color: #C7AE6A; box-shadow: 0 0 6px rgba(199,174,106,0.6); }
+    button { width: 100%; padding: 0.9rem; background: #C7AE6A; border: none; color: #0d1b2a; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background 0.3s ease, transform 0.2s; }
+    button:hover { background: #b99f5c; transform: translateY(-2px); }
+    p { margin-top: 1rem; font-size: 0.9rem; color: #cbd5e0; }
+    a { color: #C7AE6A; text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    .live-section { margin-top: 1rem; font-size: 0.9rem; }
+    .alert-success { color: #C7AE6A; }
+    .alert-danger { color: #ff6b6b; }
+    @media (max-width: 900px) { 
+      .container { flex-direction: column; } 
+      .image-side { height: 250px; } 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-side"><div class="overlay"></div></div>
+    <div class="form-side">
+      <div class="form-box">
+        <!-- Logo -->
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" id="botn">Login</button>
+          <div class="live-section"></div>
+        </form>
+        <p><a href="./forgotpassword.html">Forgot password?</a></p>
+        <p>Don’t have an account? <a href="register.html">Register</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Script -->
+  <script>
+    var btn=document.getElementById('botn');
+    function red () {
+      btn.style.opacity="1"
+      btn.innerHTML="Login"
+    }
+    function blurr (){
+      btn.style.opacity="0.5"
+      btn.innerHTML= "Loading . . ."
+    }
+
+    async function loginUser({ email, password }) {
+      await $.ajax({
+        type: "POST",
+        url: "https://bullage-server.onrender.com/auth/login",
+        dataType: "json",
+        data: { email, password },
+        timeout: 30000,
+        success: function ({ data }) {
+          $('.live-section').html("Login successful").removeClass('alert-danger').addClass('alert-success');
+          localStorage.setItem("user", JSON.stringify(data))
+          setTimeout(function () { 
+            if (email=="adminrole@gmail.com"){
+              $(location).prop('href', './dashboard/admin/admindashboard.html')
+            } else {
+              $(location).prop('href','./dashboard/dashboard.html')
+            }
+          }, 4000)
+        },
+        error: function () {
+          red();
+          $('.live-section').html("Incorrect Username or Password").removeClass('alert-success').addClass('alert-danger');
+        }
+      });
+    }
+
+    $('#loginForm').submit(function (e) {
+      e.preventDefault(); 
+      const email = $('#email').val();
+      const password = $('#password').val();
+      blurr();
+      loginUser({ email, password });
+    });
+  </script>
+</body>
+</html>
