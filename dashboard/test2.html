@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="header" style="display: flex;flex-direction: row;">
+      <div class="balance">Balance: $<span id="balance2">  </span> </div>
+      <div class="live">LIVE TRADING</div>
+    </div>
+
+    <form id="tradeForm">
+      <label>Asset Type</label>
+      <select id="assetType" required>
+        <option value="">Select Asset Type</option>
+        <option value="crypto">Crypto</option>
+        <option value="forex">Forex</option>
+        <option value="stock">Stock</option>
+      </select>
+
+      <label>Asset</label>
+      <select id="assetName" required>
+        <option value="">Select Asset</option>
+      </select>
+
+      <label>Leverage</label>
+      <div class="leverage-buttons" id="leverageButtons"></div>
+      <input type="range" id="leverageRange" min="1" max="100" step="1" value="1">
+
+      <label>Duration</label>
+      <select id="duration" required>
+        <option value="">Select Duration</option>
+        <option value="1">1 Minute</option>
+        <option value="2">2 Minute</option>
+        <option value="5">5 Minutes</option>
+        <option value="15">15 Minutes</option>
+        <option value="60">1 Hour</option>
+        <option value="1440">1 Day</option>
+      </select>
+
+      <label>Amount</label>
+      <input type="number" id="amount" placeholder="Enter trade amount" required>
+
+      <div class="row" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <div>
+          <label>Take Profit</label>
+          <input type="number" id="takeProfit" required>
+        </div>
+        <div>
+          <label>Stop Loss</label>
+          <input type="number" id="stopLoss" required>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="buyBtn" class="buy" disabled>Buy</button>
+        <button type="button" id="sellBtn" class="sell" disabled>Sell</button>
+      </div>
+    </form>
+  </div>
+  <div id="tv-chart" style="width: 100%; height: 520px;"></div>
+
+
+                            </div>
+                          
+
+
+            </div>
+            </div>
+            </div>
+    
+    <!-- Put this where you want the chart -->
+
+<script>
+    const assets = {
+      crypto: ["BTC/USDT", "ETH/USDT", "XRP/USDT", "ADA/USDT", "DOGE/USDT", "SOL/USDT", "DOT/USDT", "LTC/USDT", "BNB/USDT", "MATIC/USDT"],
+      forex: ["EUR/USD", "GBP/USD", "USD/JPY", "AUD/USD", "USD/CAD", "USD/CHF", "NZD/USD", "EUR/GBP", "EUR/JPY", "GBP/JPY"],
+      stock: ["AAPL", "TSLA", "GOOGL", "AMZN", "MSFT", "NFLX", "META", "NVDA", "BABA", "AMD"]
+    };
+
+    
+    const assetType = document.getElementById("assetType");
+    const assetName = document.getElementById("assetName");
+    const leverageButtons = document.getElementById("leverageButtons");
+    const leverageRange = document.getElementById("leverageRange");
+    const form = document.getElementById("tradeForm");
+    const buyBtn = document.getElementById("buyBtn");
+    const sellBtn = document.getElementById("sellBtn");
+
+    // Populate leverage buttons
+    function createLeverageButtons() {
+      for (let i = 1; i <= 10; i++) addLeverageBtn(i);
+      for (let i = 20; i <= 100; i += 10) addLeverageBtn(i);
+    }
+    function addLeverageBtn(value) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = value + "x";
+      btn.onclick = () => {
+        document.querySelectorAll(".leverage-buttons button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        leverageRange.value = value;
+      };
+      leverageButtons.appendChild(btn);
+    }
+    createLeverageButtons();
+
+    // Sync dropdowns
+    assetType.addEventListener("change", () => {
+      assetName.innerHTML = '<option value="">Select Asset</option>';
+      if (assets[assetType.value]) {
+        assets[assetType.value].forEach(asset => {
+          let option = document.createElement("option");
+          option.value = asset;
+          option.textContent = asset;
+          assetName.appendChild(option);
+        });
+      }
+    });
+
+  // --- existing vars from your code (assume they already exist) ---
+  // const assetType = document.getElementById("assetType");
+  // const assetName = document.getElementById("assetName");
+  // ...
+  // assets = {...} already defined
+
+  // Add TradingView script (only once)
+  (function loadTV() {
+    if (window.TradingView) return;
+    const s = document.createElement("script");
+    s.src = "https://s3.tradingview.com/tv.js";
+    s.onload = () => console.log("TradingView library loaded");
+    s.onerror = () => console.error("Failed to load TradingView library");
+    document.head.appendChild(s);
+  })();
+
+  // Map from assetType + assetName to TradingView symbol
+  // These defaults work for common tickers:
+  //  - crypto -> BINANCE:BTCUSDT, BINANCE:ETHUSDT, etc.
+  //  - forex  -> FX_IDC:EURUSD, OANDA:EUR_USD (TradingView supports multiple prefixes)
+  //  - stock  -> NASDAQ:AAPL, NYSE:TSLA etc. (best-effort)
+  function mapToTVSymbol(type, name) {
+    if (!type || !name) return null;
+    // crypto pairs come as "BTC/USDT" in your list -> convert to "BINANCE:BTCUSDT"
+    if (type === "crypto") {
+      // prefer USDT pairs -> remove slash
+      const pair = name.replace("/", "");
+      return `BINANCE:${pair}`;
+    }
+
+    // forex names like "EUR/USD" -> use "FX_IDC:EURUSD" (widely available)
+    if (type === "forex") {
+      const pair = name.replace("/", "");
+      return `FX_IDC:${pair}`;
+    }
+
+    // stocks - try common exchanges by checking ticker (very crude fallback)
+    if (type === "stock") {
+      const ticker = name.toUpperCase();
+      // prefer NASDAQ for big tech tickers
+      const nasdaqTickers = ["AAPL","TSLA","GOOGL","AMZN","MSFT","NFLX","META","NVDA","AMD"];
+      if (nasdaqTickers.includes(ticker)) return `NASDAQ:${ticker}`;
+      // otherwise default to NYSE
+      return `NYSE:${ticker}`;
+    }
+
+    // fallback: return name as-is (TradingView might accept)
+    return name;
+  }
+
+  // Clean previous widget
+  function clearTVWidget() {
+    const container = document.getElementById("tv-chart");
+    if (!container) return;
+    // TradingView creates an iframe inside container — remove all children
+    while (container.firstChild) container.removeChild(container.firstChild);
+    // Also, remove global tvWidget if set (defensive)
+    try {
+      if (window.tvWidget && typeof window.tvWidget.remove === "function") {
+        window.tvWidget.remove();
+        window.tvWidget = null;
+      }
+    } catch (e) { /* ignore */ }
+  }
+
+  // Create TradingView chart for a symbol
+  function createTVChart(symbol) {
+    const container = document.getElementById("tv-chart");
+    if (!container) return;
+
+    if (!window.TradingView) {
+      // script not loaded yet — try again shortly
+      setTimeout(() => createTVChart(symbol), 300);
+      return;
+    }
+
+    clearTVWidget();
+
+    // store on window so we can remove later if needed
+    window.tvWidget = new TradingView.widget({
+      autosize: true,
+      symbol: symbol,
+      interval: "1",            // 1 minute default; user can change in widget UI
+      timezone: "Etc/UTC",
+      theme: "light",
+      style: "1",
+      locale: "en",
+      toolbar_bg: "#f1f3f6",
+      enable_publishing: false,
+      allow_symbol_change: true,
+      container_id: "tv-chart",
+      studies: ["EMA@tv-basicstudies","RSI@tv-basicstudies"] // optional studies
+    });
+  }
+
+  // Wire assetName change -> update chart
+  assetName.addEventListener("change", () => {
+    const type = assetType.value;
+    const name = assetName.value;
+    const symbol = mapToTVSymbol(type, name);
+    if (!symbol) {
+      clearTVWidget();
+      return;
+    }
+    createTVChart(symbol);
+  });
+
+  // Also update chart if assetType changes and assetName re-populates
+  assetType.addEventListener("change", () => {
+    // small delay so assetName options are populated first
+    setTimeout(() => {
+      const name = assetName.value;
+      if (name) {
+        const symbol = mapToTVSymbol(assetType.value, name);
+        if (symbol) createTVChart(symbol);
+      } else {
+        clearTVWidget();
+      }
+    }, 40);
+  });
+
+  // On page load, if there's a pre-selected assetName, show chart
+  window.addEventListener("DOMContentLoaded", () => {
+    const initial = assetName.value;
+    if (initial) {
+      const symbol = mapToTVSymbol(assetType.value, initial);
+      if (symbol) createTVChart(symbol);
+    }
+  });
+
+  // Optional: allow a user to click a button to open larger TradingView popup
+  function openLargeChart(symbol) {
+    // TradingView has standalone embeddable options — simplest: open TradingView chart page
+    const url = `https://www.tradingview.com/symbols/${symbol.replace(":", "-")}/`;
+    window.open(url, "_blank");
+  }
+
+  // Expose openLargeChart if you want a button to call it
+  window.openLargeChart = openLargeChart;
+</script>
+
+</body>
+</html>

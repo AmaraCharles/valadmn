@@ -1,0 +1,1927 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bullagetrade - User Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="This User Dashboard was built with love." />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="./test_files/favicon.png">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- google fonts -->
+    <link href="./test_files/css" rel="stylesheet">
+    <!-- plugin stylesheets -->
+    
+    <link rel="stylesheet" type="text/css" href="./test_files/vendors.css">
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="./test_files/style.css">
+    <!-- stylesheet style -->
+    <link rel="stylesheet" type="text/css" href="./test_files/sweetalert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ApexCharts CDN -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">  
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="./test_files/vendors.css">
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="./test_files/style.css">
+    <!-- stylesheet style -->
+    <link rel="stylesheet" type="text/css" href="./test_files/sweetalert.css">
+   
+</head>
+
+<body> 
+    <!-- begin app -->
+    <div class="app">
+        <!-- begin app-wrap -->
+        <div class="app-wrap">
+            <!-- begin pre-loader -->
+         
+            <!-- end pre-loader -->
+           
+
+                     <!-- begin app-header -->
+                     <header class="app-header top-bar" id="highest">
+                        <!-- begin navbar -->
+                        <nav class="navbar navbar-expand-md">
+        
+                            <!-- begin navbar-header -->
+                            <div class="navbar-header d-flex align-items-center">
+                                <a href="javascript:void:(0)" class="mobile-toggle"><i class="fas fa-align-right"></i></a>
+                                <a class="navbar-brand" href="dashboard.html">
+                                    <img src="./dashboard_files/logo.png" class="img-fluid logo-desktop" alt="logo">
+                                    <img src="./dashboard_files/logo-icon.png" class="img-fluid logo-mobile" alt="logo">
+                                </a>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                            <!-- end navbar-header -->
+                    <!-- begin navigation -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="navigation d-flex">
+                            <ul class="navbar-nav nav-left">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link sidebar-toggle">
+                                       <i class="fa-solid fa-align-right"></i>
+
+                                    </a>
+                                </li>
+                            
+                                <li class="nav-item full-screen d-none d-lg-block" id="btnFullscreen">
+                                    <a href="javascript:void(0)" class="nav-link expand">
+                                        <i class="icon-size-fullscreen"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav nav-right ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-envelope"></i>
+
+                                    </a>
+                                    <div class="dropdown-menu extended animated fadeIn" aria-labelledby="navbarDropdown">
+                                        <ul>
+                                            <li class="dropdown-header bg-gradient p-4 text-white text-left">Messages
+                                                <label class="label label-info label-round">6</label>
+                                                <a href="#" class="float-right btn btn-square btn-inverse-light btn-xs m-0">
+                                                    <span class="font-13"> Mark all as read</span></a>
+                                            </li>
+                                            <li class="dropdown-body">
+                                                <ul class="scrollbar scroll_dark max-h-240">
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/03.jpg" alt="user3">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Brianing Leyon</p>
+                                                                    <small>You will sail along until you...</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/01.jpg" alt="user">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Jimmyimg Leyon</p>
+                                                                    <small>Okay</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/02.jpg" alt="user2">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Brainjon Leyon</p>
+                                                                    <small>So, make the decision...</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/04.jpg" alt="user4">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Smithmin Leyon</p>
+                                                                    <small>Thanks</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/05.jpg" alt="user5">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Jennyns Leyon</p>
+                                                                    <small>How are you</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <img class="img-fluid" src="assets/img/avtar/06.jpg" alt="user6">
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Demian Leyon</p>
+                                                                    <small>I like your themes</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-footer">
+                                                <a class="font-13" href="javascript:void(0)"> View All messages </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-bell"></i>
+                                        <span class="notify">
+                                                    <span class="blink"></span>
+                                        <span class="dot"></span>
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu extended animated fadeIn" aria-labelledby="navbarDropdown">
+                                        <ul>
+                                            <li class="dropdown-header bg-gradient p-4 text-white text-left">Notifications
+                                                <a href="#" class="float-right btn btn-square btn-inverse-light btn-xs m-0">
+                                                    <span class="font-13"> Clear all</span></a>
+                                            </li>
+                                            <li class="dropdown-body min-h-240 nicescroll">
+                                                <ul class="scrollbar scroll_dark max-h-240">
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <div class="bg-type bg-type-md">
+                                                                        <span>HY</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Login Successfully</p>
+                                                                    <small>Just now</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <div class="bg-type bg-type-md bg-success">
+                                                                        <span>GM</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">New invoice received</p>
+                                                                    <small>22 min</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <div class="bg-type bg-type-md bg-danger">
+                                                                        <span>FR</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Server error report</p>
+                                                                    <small>7 min</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <div class="bg-type bg-type-md bg-info">
+                                                                        <span>HT</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Database report</p>
+                                                                    <small>1 day</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">
+                                                            <div class="notification d-flex flex-row align-items-center">
+                                                                <div class="notify-icon bg-img align-self-center">
+                                                                    <div class="bg-type bg-type-md">
+                                                                        <span>DE</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="notify-message">
+                                                                    <p class="font-weight-bold">Order confirmation</p>
+                                                                    <small>2 day</small>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-footer">
+                                                <a class="font-13" href="javascript:void(0)"> View All Notifications
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link search" href="javascript:void(0)">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                    <div class="search-wrapper">
+                                        <div class="close-btn">
+                                            <i class="fas fa-close"></i>
+                                        </div>
+                                        <div class="search-content">
+                                            <form>
+                                                <div class="form-group">
+                                                    <i class="fas fa-search magnifier"></i>
+                                                    <input type="text" class="form-control autocomplete" placeholder="Search Here" id="autocomplete-ajax" autofocus="autofocus">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-ite">
+                                <a class="nav-link " href="javascript:void(0)"><h4 style="font-weight: 500;" id="captionUsername"></h4></a>
+                                    
+                                </li>
+                                
+                                <li class="nav-item dropdown user-profile">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="./dashboard_files/favicon.png" alt="avatar-img">
+                                        <span class="bg-success user-status"></span>
+                                    </a> 
+                                    <div class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown4">
+                                        <div class="bg-gradient px-4 py-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="mr-1">
+                                                    <h4 class="text-white mb-0" id="headerUsername">
+                                                        </h4>
+                                                    <small class="text-white" id="email"></small>
+                                                </div>
+                                                <a href="../login.html" class="text-white font-20 tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="Logout"> 
+                                                    <i class="fas fa-power"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="p-4">
+                                            <a class="dropdown-item d-flex nav-link" href="profile.html">
+                                                <i class="fas fa-user pr-2 text-success"></i> Profile
+                                            </a>
+                                            <a class="dropdown-item d-flex nav-link" href="javascript:void(0)">
+                                                <i class="fas fa-envelope pr-2 text-primary"></i> Inbox
+                                                <span class="badge badge-primary ml-auto">0</span>
+                                            </a>
+                                            <a class="dropdown-item d-flex nav-link" href="deposit.html">
+                                                <i class=" fas fa-settings pr-2 text-info"></i> Deposit
+                                            </a>
+                                            <a class="dropdown-item d-flex nav-link" href="javascript:void(0)">
+                                                <i class="fas fa-compass pr-2 text-warning"></i> Need help?
+                                                <span class="badge badge-success ml-auto">support@Bullagetrade.com</span> 
+                                            </a>
+                                            <div class="row mt-2">
+                                                <div class="col">
+                                                    <a class="bg-light p-3 text-center d-block" href="dashboard.html">
+                                                        <i class="font-27 text-primary" id="balance"></i> 
+                                                        <span class="d-block font-15 mt-2">My Balance</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col">
+                                                    <a class="bg-light p-3 text-center d-block" href="dashboard.html">
+                                                        <i class="font-27 text-primary" id="profit"></i>
+                                                        <span class="d-block font-15 mt-2">My Profit</span> 
+                                                    </a>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end navigation -->
+                </nav>
+                <!-- end navbar -->
+            </header>
+            <!-- end app-header -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+            <!-- begin app-container -->
+            <div class="app-container">
+               
+ <!-- begin app-nabar -->
+ <aside class="app-navbar">
+    <!-- begin sidebar-nav -->
+    <div class="sidebar-nav scrollbar scroll_light mCustomScrollbar _mCS_3 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;"><div id="mCSB_3" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;"><div id="mCSB_3_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+        <ul class="metismenu " id="sidebarNav">
+            <li class="nav-static-title">Personal</li>
+            <li class="active">
+                <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">
+                    <i class="nav-icon fas fa-rocket"></i>
+                    <span class="nav-title">Dashboard</span>
+                    <span class="nav-label label label-danger">Welcome</span>
+                </a> 
+                <ul aria-expanded="false" class="collapse in">
+                    <li class="active"> <a href="dashboard.html">Home</a> </li>
+                </ul>
+            </li>
+<li><a href="deposit.html" aria-expanded="false"><i class="fas fas fa-money"></i><span class="nav-title">Deposit</span></a> </li>
+                       
+                        <li><a href="withdrawal.html" aria-expanded="false"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+<span class="nav-title">Withdraw</span></a> </li>
+<li><a href="wallet.html" aria-expanded="false"> <i class="fas fa-qrcode" aria-hidden="true"></i>
+<span class="nav-title">Connect Wallet</span></a> </li>
+             <li><a href="brokers.html" aria-expanded="false"><i class="fas fas fa-bar-chart-o"></i><span class="nav-title">Copy Trading</span></a> </li>
+           
+              <li><a href="livetrade.html" aria-expanded="false"><i class="fas fas fa-eye"></i><span class="nav-title">Live trade</span></a> </li>
+            <li><a href="placetrade.html" aria-expanded="false"><i class="fas fa-rotate-right"></i><span class="nav-title">Place Trade</span></a> </li>
+
+            <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-suitcase"></i><span class="nav-title">Transactions</span></a>
+                <ul aria-expanded="false" class="collapse">
+                    <li> <a href="my_trades.html">My Trades</a> </li>
+                    <li> <a href="balance.html">My transactions</a> </li>
+                </ul>
+            </li> 
+
+            <li>
+                <!-- Dark Mode Toggle (paste near end of <body>) -->
+<style>
+  /* Toggle button */
+  .color-toggle {
+    position: fixed;
+    right: 16px;
+    bottom: 24px;
+    z-index: 99999;
+    background: #2c2e3e;
+    color: #fff;
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  .color-toggle[data-mode="light"] { background: #fff; color: #2c2e3e; box-shadow: 0 6px 20px rgba(44,46,62,.12); }
+  .color-toggle .dot { display:inline-block; width:14px; height:14px; border-radius:50%; margin-right:8px; vertical-align:middle; }
+  .color-toggle[data-mode="dark"] .dot { background:#fff; }
+  .color-toggle[data-mode="light"] .dot { background:#2c2e3e; }
+</style>
+
+<button class="color-toggle" id="colorToggle" data-mode="light" aria-pressed="false" title="Toggle dark mode">
+  <span class="dot"></span>
+  Dark mode
+</button>
+
+<script>
+(function(){
+  const toggle = document.getElementById('colorToggle');
+  const DARK_BG = '#2c2e3e';
+  const DARK_TEXT = '#ffffff';
+
+  const WHITEISH_LUMINANCE = 0.9; 
+  const DARK_TEXT_LUMINANCE = 0.45; 
+
+  function parseColor(str){
+    if(!str) return null;
+    str = str.trim();
+    const rgbMatch = str.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)$/i);
+    if(rgbMatch){
+      return { r:+rgbMatch[1], g:+rgbMatch[2], b:+rgbMatch[3], a:rgbMatch[4]===undefined?1:+rgbMatch[4] };
+    }
+    const hexMatch = str.match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+    if(hexMatch){
+      let hex = hexMatch[1];
+      if(hex.length===3) hex = hex.split('').map(h=>h+h).join('');
+      return { r:parseInt(hex.slice(0,2),16), g:parseInt(hex.slice(2,4),16), b:parseInt(hex.slice(4,6),16), a:1 };
+    }
+    if(str==='transparent') return {r:0,g:0,b:0,a:0};
+    try {
+      const d=document.createElement('div');
+      d.style.color=str;
+      document.body.appendChild(d);
+      const cs=getComputedStyle(d).color;
+      document.body.removeChild(d);
+      return parseColor(cs);
+    } catch(e){ return null; }
+  }
+
+  function luminance(c){
+    if(!c) return 0;
+    return (0.2126*c.r + 0.7152*c.g + 0.0722*c.b) / 255;
+  }
+
+  function isVisible(el){
+    if(!(el instanceof Element)) return false;
+    const cs=getComputedStyle(el);
+    if(cs.display==='none'||cs.visibility==='hidden'||cs.opacity==='0') return false;
+    const rect=el.getBoundingClientRect();
+    if(rect.width===0 && rect.height===0) return false;
+    return true;
+  }
+
+  function applyDarkMode(enable){
+    const all=Array.from(document.querySelectorAll('body *'));
+    all.unshift(document.body);
+
+    for(const el of all){
+      try{
+        if(!isVisible(el)) continue;
+        const cs=getComputedStyle(el);
+        const parsedBg=parseColor(cs.backgroundColor);
+        const bgAlpha=parsedBg ? parsedBg.a : 1;
+
+        if(enable){
+          if(el.dataset._origColor===undefined) el.dataset._origColor=cs.color||'';
+          if(el.dataset._origBg===undefined) el.dataset._origBg=cs.backgroundColor||'';
+
+          if(parsedBg && bgAlpha>0){
+            const lum=luminance(parsedBg);
+            if(lum>=WHITEISH_LUMINANCE){
+              el.style.backgroundColor=DARK_BG;
+              const borderTop=parseColor(cs.borderTopColor);
+              if(borderTop && luminance(borderTop)>=WHITEISH_LUMINANCE){
+                el.style.borderTopColor=DARK_BG;
+                el.style.borderRightColor=DARK_BG;
+                el.style.borderBottomColor=DARK_BG;
+                el.style.borderLeftColor=DARK_BG;
+              }
+            }
+          }
+
+          const textColor=parseColor(cs.color);
+          if(textColor && luminance(textColor)<=DARK_TEXT_LUMINANCE){
+            el.style.color=DARK_TEXT;
+          }
+        } else {
+          if(el.dataset._origBg!==undefined){
+            el.style.backgroundColor=el.dataset._origBg||'';
+            el.style.borderTopColor='';
+            el.style.borderRightColor='';
+            el.style.borderBottomColor='';
+            el.style.borderLeftColor='';
+            delete el.dataset._origBg;
+          }
+          if(el.dataset._origColor!==undefined){
+            el.style.color=el.dataset._origColor||'';
+            delete el.dataset._origColor;
+          }
+        }
+      } catch(e){}
+    }
+  }
+
+  // --- Persistent State ---
+  let dark = localStorage.getItem('darkMode') === 'true';
+
+  function updateToggleBtn(){
+    toggle.setAttribute('data-mode', dark ? 'dark' : 'light');
+    toggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    toggle.innerHTML = `<span class="dot"></span> ${dark ? 'Light mode' : 'Dark mode'}`;
+  }
+
+  updateToggleBtn();
+  applyDarkMode(dark);
+
+  toggle.addEventListener('click', ()=>{
+    dark=!dark;
+    localStorage.setItem('darkMode', dark);
+    updateToggleBtn();
+    applyDarkMode(dark);
+  });
+
+})();
+</script>
+
+
+            </li>
+            <style>
+                .collapse {
+display: none;
+}
+.collapse.show {
+display: block;
+}
+
+            </style>
+            <script>
+                document.querySelectorAll('.has-arrow').forEach(function(toggle) {
+                  toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+              
+                    // Toggle aria-expanded
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    submenu.setAttribute('aria-expanded', !expanded);
+              
+                    // Toggle show/hide class
+                    submenu.classList.toggle('show');
+                  });
+                });
+              </script>
+                <script>
+                           
+                    // async function fetchUserInfo() {
+                    //   var parsedData = localStorage.getItem('user')
+                    //   var user = JSON.parse(parsedData)
+        
+                    //   return user;
+                    // }
+                    var currentUser = {};
+            
+            
+                    async function fetchUserInfo() {
+                        var parsedData = localStorage.getItem('user')
+                        var userFromLS = JSON.parse(parsedData)
+        
+            
+                        
+            
+                        const response = await $.ajax({
+                            type: "GET",
+                            url: `https://bullage-server.onrender.com/users/emailz/${userFromLS.email}`,
+                            dataType: "json",
+                            timeout: 30000,
+                            success: async function (data) {
+                                Object.assign(currentUser, data.data)
+                                 localStorage.setItem("user", JSON.stringify(data.data))
+                            },
+                            error: function () {
+                                alert(error)
+                            }
+                        });
+            
+                        return response.data;
+                    }
+            
+                    $(document).ready(async function () {
+                         let sum;
+
+ const userInfo=await fetchUserInfo()
+    
+    
+ $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+                        $("#captionUsername").html(userInfo.firstName + " " + userInfo.lastName);
+                        $("#headerUsername").html(userInfo.firstName + " " + userInfo.lastName);
+            
+                        $("#email").html(userInfo.email);
+                        $("#balance").html(userInfo.balance);
+                        $("#balancedash").html("$"+userInfo.balance);
+                       
+                        $("#profit").html(userInfo.profit);
+                         $("#profitdash").html("+$"+userInfo.profit);
+let openTrades=0
+let closedTrades=0
+let wonTrades=0
+let lostTrades=0
+
+                        userInfo.planHistory.forEach(trade => {
+ if(trade.status=="RUNNING"){
+
+    openTrades++
+ }
+
+ if(trade.status=="COMPLETED"){
+
+    closedTrades++
+ }
+ if(trade.result=="WON"){
+
+    wonTrades++
+ }
+ if(trade.result=="LOST"){
+
+    lostTrades++
+ }
+
+
+});
+
+  $("#openTrades").html(openTrades);
+                       
+                   
+  $("#closedTrades").html(closedTrades);
+
+              $("#winLoss").html(wonTrades+"/"+lostTrades);              
+                    })
+            
+            
+                </script>
+    
+               
+            <li><a href="rewards.html" aria-expanded="false"><i class="fas fa-medal"></i>
+<span class="nav-title">Rewards</span></a> </li>
+             <li><a href="profile.html" aria-expanded="false"><i class="fas fa-user"></i><span class="nav-title">Profile</span></a> </li>
+              <li><a href="kyc.html" aria-expanded="false"><i class="fa-solid fa-passport"></i>
+<span class="nav-title">KYC</span></a> </li>
+                                       <li><a href="../login.html" aria-expanded="false"><i class="fas fa-sign-out" aria-hidden="true"></i><span class="nav-title">Logout</span></a> </li>
+           
+       
+    
+        </ul>
+    </div></div><div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+    <!-- end sidebar-nav -->
+</aside>
+
+<style>
+    .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+</style>
+                <!-- end app-navbar -->
+                <!-- begin app-main -->
+               
+                <div class="app-main" id="main">
+                    <!-- begin container-fluid -->
+                    <div class="container-fluid">
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-lg-flex flex-nowrap align-items-center">
+                                    <div class="page-title mr-4 pr-4 border-right">
+                                        <h1>Stock Trading</h1>
+                                    </div>
+                                    <div class="breadcrumb-bar align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="dashboard.html"><i class="fas fa-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    Dashboard
+                                                </li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">Default</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center secondary-menu text-center">
+                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Todo list">
+                                            <i class="fas fa-edit btn btn-icon text-primary"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Projects">
+                                            <i class="fas fa-lightbulb-o btn btn-icon text-success"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Task">
+                                            <i class="fas fa-check btn btn-icon text-warning"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar">
+                                            <i class="fas fa-calendar-o btn btn-icon text-cyan"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Analytics">
+                                            <i class="fas fa-bar-chart-o btn btn-icon text-danger"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>
+                        <!-- Notification -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert border-0 alert-primary bg-gradient m-b-30 alert-dismissible fade show border-radius-none" role="alert">
+                                    <strong>Welcome Back, <span><strong id="username"></strong></span></strong> Happy Stock Trading, feel free to reach out to us for assistance if you need any. 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <i class="fas fa-close"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- end row -->
+
+
+
+<style>
+  .dashboard-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .dashboard-row .card {
+    flex: 1; /* ✅ only first-row cards stretch */
+  }
+  .card {
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font: 600 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .card .value {
+    font: 700 28px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+
+  /* Color themes */
+  .open   { background:#ebf5ff; border:1px solid #93c5fd; }
+  .open h3, .open .value { color:#1d4ed8; }
+
+  .closed { background:#f9fafb; border:1px solid #d1d5db; }
+  .closed h3, .closed .value { color:#374151; }
+
+  .ratio  { background:#ecfdf5; border:1px solid #6ee7b7; }
+  .ratio h3, .ratio .value { color:#047857; }
+
+  /* New Balance/Profit card */
+  .summary {
+    background:#fff7ed;
+    border:1px solid #fdba74;
+    display: flex;
+    justify-content: space-between; /* 👈 pushes them apart */
+    align-items: center;
+  }
+  .summary h3, .summary .value { color:#c2410c; }
+  .summary .item h3 {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-row { flex-direction: row; }
+  }
+</style>
+
+<div class="dashboard-row">
+    <div class="card summary" style="display: flex;flex-direction: row; justify-content: space-between;">
+  <div class="item">
+    <h3>Balance</h3>
+    <div class="value" id="balancedash">...</div>
+  </div>
+  <div class="item">
+    <h3>Profit</h3>
+    <div class="value" id="profitdash">...</div>
+  </div>
+</div>
+
+  <div class="card open">
+    <h3>Open Trades</h3>
+    <div class="value" id="openTrades"></div>
+  </div>
+  <div class="card closed">
+    <h3>Closed Trades</h3>
+    <div class="value" id="closedTrades"></div>
+  </div>
+  <div class="card ratio">
+    <h3>Win/Loss Ratio</h3>
+    <div class="value" id="winLoss"></div>
+  </div>
+</div>
+
+<!-- 4th card spanning full width -->
+<style>
+  .card.summary {
+    background-color: #f4f7fa;
+    border: 1px solid #93c5fd;
+    display: flex;                /* ✅ corrected */
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+    flex-wrap: wrap;              /* ✅ allows wrapping if too tight */
+  }
+
+  .card.summary h3 {
+    color: #055656;
+    margin: 0 0 4px;
+    font: 600 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+
+  .card.summary .value {
+    color: #6ee7b7;
+    font: 700 24px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+
+  /* ✅ Responsive adjustments */
+  @media (max-width: 600px) {
+    .card.summary {
+      flex-direction: column;     /* stack items */
+      align-items: flex-start;    /* left-align */
+    }
+    .card.summary h3 {
+      font-size: 11px;
+    }
+    .card.summary .value {
+      font-size: 18px;            /* smaller values on mobile */
+    }
+  }
+</style>
+
+
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" >
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
+        rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on
+            TradingView</span></a></div>
+    <script type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500 Index"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100 Cash CFD"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR to USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    }
+                ],
+                    "showSymbolLogo": true,
+                        "isTransparent": false,
+                            "displayMode": "adaptive",
+                                "colorTheme": "light",
+                                    "locale": "en"
+            }
+        </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+
+
+
+                        <!-- Owl Carousel CSS -->
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                        <link rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+                        <!-- jQuery -->
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                        <!-- Owl Carousel JS -->
+                        <script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+                        <style>
+                            body {
+                                font-family: 'Segoe UI', sans-serif;
+                                background-color: #f4f6f8;
+                                margin: 0;
+                                padding: 2rem;
+                            }
+
+                            .financial-widget-card {
+                                background: #fff;
+                                margin-bottom: 20px;
+                                max-width: 100%;
+                                overflow: hidden;
+                            }
+
+                            .financial-carousel .item {
+                                padding: 10px;
+                            }
+
+                            .financial-carousel iframe {
+                                width: 100%;
+                                height: 120px;
+                                border: none;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                            }
+
+                            .owl-nav,
+                            .owl-dots {
+                                display: none;
+                                /* Hide navigation for simplicity */
+                            }
+                        </style>
+
+                        <div class="financial-widget-card" style="margin-bottom: 20px;">
+
+                            <!-- TradingView Widget Carousel BEGIN -->
+<div class="stock-carousel-container">
+    <div class="stock-carousel">
+      <!-- Stock 1 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track EUR/USD</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "FX:EURUSD",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 2 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track AAPL</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:AAPL",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 3 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track TSLA</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:TSLA",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 4 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track GOOGL</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:GOOGL",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 5 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track MSFT</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:MSFT",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 6 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track AMZN</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:AMZN",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+      <!-- Stock 7 -->
+      <div class="stock-item">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text">Track FB</span>
+            </a>
+          </div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+          {
+          "symbol": "NASDAQ:FB",
+          "width": 350,
+          "isTransparent": false,
+          "colorTheme": "light",
+          "locale": "en"
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TradingView Widget Carousel END -->
+  
+  <!-- Add this for carousel scrolling -->
+  <style>
+    .stock-carousel-container {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+  
+    .stock-carousel {
+      display: inline-flex;
+      gap: 20px;
+    }
+  
+    .stock-item {
+      display: inline-block;
+      width: 350px;
+      margin-right: 10px;
+    }
+  
+    /* Optional - Add some styling for a nicer scroll effect */
+    .stock-carousel-container::-webkit-scrollbar {
+      height: 8px;
+    }
+  
+    .stock-carousel-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+  
+    .stock-carousel-container::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+  
+  <!-- Add JS for automatic scrolling -->
+  <script>
+    const carousel = document.querySelector('.stock-carousel');
+    setInterval(function() {
+      carousel.scrollBy({
+        left: 370, // Change the number based on the width of your items
+        behavior: 'smooth'
+      });
+    }, 3000); // Scroll every 3 seconds
+  </script>
+  
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card card-statistics">
+                                        <div class="ro no-gutters">
+                                            <div class="tradingview-widget-container">
+                                                <div class="tradingview-widget-container__widget"></div>
+                                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div> -->
+                                                <script type="text/javascript"
+                                                    src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js"
+                                                    async>
+                                                        {
+                                                            "colorTheme": "light",
+                                                                "dateRange": "12M",
+                                                                    "exchange": "US",
+                                                                        "showChart": true,
+                                                                            "locale": "en",
+                                                                                "largeChartUrl": "",
+                                                                                    "isTransparent": false,
+                                                                                        "showSymbolLogo": false,
+                                                                                            "showFloatingTooltip": false,
+                                                                                                "height": "550",
+                                                                                                    "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                                                                                                        "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                                                                                                            "gridLineColor": "rgba(42, 46, 57, 0)",
+                                                                                                                "scaleFontColor": "rgba(209, 212, 220, 1)",
+                                                                                                                    "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                                                                                                                        "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                                                                                                                            "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                                                                                                                                "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                                                                                                                                    "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+                                                        }
+                                                    </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+    
+                            <!-- begin row -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card card-statistics">
+                                        <div class="row no-gutters">
+                                            <div class="col-xxl-9 col-lg-6">
+                                                <!-- TradingView Widget BEGIN -->
+                                                <div class="tradingview-widget-container">
+                                                    <div class="tradingview-widget-container__widget"></div>
+                                                    <script type="text/javascript"
+                                                        src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js"
+                                                        async>
+                                                            {
+                                                                "exchanges": [],
+                                                                    "dataSource": "SPX500",
+                                                                        "grouping": "sector",
+                                                                            "blockSize": "market_cap_basic",
+                                                                                "blockColor": "change",
+                                                                                    "locale": "en",
+                                                                                        "symbolUrl": "",
+                                                                                            "colorTheme": "light",
+                                                                                                "hasTopBar": false,
+                                                                                                    "isDataSetEnabled": false,
+                                                                                                        "isZoomEnabled": true,
+                                                                                                            "hasSymbolTooltip": true,
+                                                                                                                "isMonoSize": false,
+                                                                                                                    "width": "100%",
+                                                                                                                        "height": "100%"
+                                                            }
+                                                        </script>
+                                                </div>
+                                                <!-- TradingView Widget END -->
+                                            </div>
+    
+    
+    
+                                            <div class="col-xxl-3 col-lg-6">
+    
+                                                <!-- TradingView Widget BEGIN -->
+                                                <div class="tradingview-widget-container">
+                                                    <div class="tradingview-widget-container__widget"></div>
+                                                    <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div> -->
+                                                    <script type="text/javascript"
+                                                        src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+                                                        async>
+                                                            {
+                                                                "symbols": [
+                                                                    [
+                                                                        "Google",
+                                                                        "GOOGL|1D"
+                                                                    ],
+                                                                    [
+                                                                        "Microsoft",
+                                                                        "MSFT|1D"
+                                                                    ],
+                                                                    [
+                                                                        "Apple",
+                                                                        "AAPL|1D"
+                                                                    ]
+                                                                ],
+                                                                    "chartOnly": false,
+                                                                        "width": "100%",
+                                                                            "locale": "en",
+                                                                                "colorTheme": "light",
+                                                                                    "autosize": true,
+                                                                                        "showVolume": false,
+                                                                                            "showMA": false,
+                                                                                                "hideDateRanges": false,
+                                                                                                    "hideMarketStatus": false,
+                                                                                                        "hideSymbolLogo": false,
+                                                                                                            "scalePosition": "right",
+                                                                                                                "scaleMode": "Normal",
+                                                                                                                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                                                                                                                        "fontSize": "10",
+                                                                                                                            "noTimeScale": false,
+                                                                                                                                "valuesTracking": "1",
+                                                                                                                                    "changeMode": "price-and-percent",
+                                                                                                                                        "chartType": "area",
+                                                                                                                                            "maLineColor": "#2962FF",
+                                                                                                                                                "maLineWidth": 1,
+                                                                                                                                                    "maLength": 9,
+                                                                                                                                                        "headerFontSize": "medium",
+                                                                                                                                                            "lineWidth": 2,
+                                                                                                                                                                "lineType": 0,
+                                                                                                                                                                    "dateRanges": [
+                                                                                                                                                                        "1d|1",
+                                                                                                                                                                        "1m|30",
+                                                                                                                                                                        "3m|60",
+                                                                                                                                                                        "12m|1D",
+                                                                                                                                                                        "60m|1W",
+                                                                                                                                                                        "all|1M"
+                                                                                                                                                                    ]
+                                                            }
+                                                        </script>
+                                                </div>
+                                                <!-- TradingView Widget END -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+    
+
+                            <div class="row">
+                                <div class="col-xxl-7 m-b-30">
+                                    <div class="card card-statistics h-100 mb-0 apexchart-tool-force-top">
+                                        <div class="card-header d-flex justify-content-between">
+                                            <div class="card-heading">
+                                                <h4 class="card-title">Site activity</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 col-xs-6 col-lg-3">
+                                                    <div class="row mb-2 pb-3 align-items-end">
+                                                        <div class="col">
+                                                            <p>Users</p>
+                                                            <h3 class="tex-dark mb-0">8.6K</h3>
+                                                        </div>
+                                                        <div class="col ml-auto">
+                                                            <span><i class="fa fa-arrow-down"></i> 2.5%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-6 col-lg-3">
+                                                    <div class="row mb-2 pb-3 align-items-end">
+                                                        <div class="col">
+                                                            <p>Revenue</p>
+                                                            <h3 class="tex-dark mb-0">176K</h3>
+                                                        </div>
+                                                        <div class="col ml-auto">
+                                                            <span><i class="fa fa-arrow-up"></i> 15%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-6 col-lg-3">
+                                                    <div class="row mb-2 pb-3 align-items-end">
+                                                        <div class="col">
+                                                            <p>Rate</p>
+                                                            <h3 class="tex-dark mb-0">6.2K</h3>
+                                                        </div>
+                                                        <div class="col ml-auto">
+                                                            <span><i class="fa fa-arrow-down"></i> 6.5%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-6 col-lg-3">
+                                                    <div class="row mb-2 pb-3 align-items-end">
+                                                        <div class="col">
+                                                            <p>Sessions</p>
+                                                            <h3 class="tex-dark mb-0">44K</h3>
+                                                        </div>
+                                                        <div class="col ml-auto">
+                                                            <span><i class="fa fa-arrow-down"></i> 1.8%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 px-0">
+                                                    <div class="apexchart-wrapper p-inherit">
+                                                        <div id="analytics1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    var options = {
+                                      series: [{
+                                        name: 'Users',
+                                        data: [450, 560, 610, 780, 740, 850, 900]
+                                      }, {
+                                        name: 'Sessions',
+                                        data: [320, 420, 520, 600, 630, 700, 780]
+                                      }],
+                                      chart: {
+                                        height: 300,
+                                        type: 'area',
+                                        toolbar: {
+                                          show: false
+                                        }
+                                      },
+                                      colors: ['#3f51b5', '#e91e63'],
+                                      dataLabels: {
+                                        enabled: false
+                                      },
+                                      stroke: {
+                                        curve: 'smooth'
+                                      },
+                                      xaxis: {
+                                        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                                      },
+                                      legend: {
+                                        position: 'top'
+                                      },
+                                      fill: {
+                                        type: 'gradient',
+                                        gradient: {
+                                          shadeIntensity: 1,
+                                          opacityFrom: 0.4,
+                                          opacityTo: 0.1
+                                        }
+                                      }
+                                    };
+                                    
+                                    var chart = new ApexCharts(document.querySelector("#analytics1"), options);
+                                    chart.render();
+                                    </script>
+                           
+                           <div class="col-xxl-5 m-b-30">
+                            <div class="card card-statistics h-100 mb-0">
+                              <div class="card-header d-flex justify-content-between">
+                                <div class="card-heading">
+                                  <h4 class="card-title">Income Analysis</h4>
+                                </div>
+                                <div class="dropdown">
+                                  <a class="p-2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-circle"></i>
+                                  </a>
+                                  <div class="dropdown-menu custom-dropdown dropdown-menu-right p-4">
+                                    <h6 class="mb-1">Action</h6>
+                                    <a class="dropdown-item" href="#"><i class="fa-fw fa fa-file-o pr-2"></i>View reports</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-fw fa fa-edit pr-2"></i>Edit reports</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-fw fa fa-bar-chart-o pr-2"></i>Statistics</a>
+                                    <h6 class="mb-1 mt-3">Export</h6>
+                                    <a class="dropdown-item" href="#"><i class="fa-fw fa fa-file-pdf-o pr-2"></i>Export to PDF</a>
+                                    <a class="dropdown-item" href="#"><i class="fa-fw fa fa-file-excel-o pr-2"></i>Export to CSV</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <h2>3.8k</h2>
+                                    <span class="d-block mb-2 font-16">AVG sessions</span>
+                                    <span class="d-block mb-2 mb-sm-5"><b class="text-primary">-65.88%</b> vs last 1 months</span>
+                                    <p class="mb-3">Sapiente corporis fugiat, doloremque eveniet nostrum id molestiae quaerat!</p>
+                                    <a class="btn btn-round btn-inverse-primary mb-3 mb-sm-0" href="#"><b>View details </b></a>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="apexchart-wrapper">
+                                      <div id="analytics2" class="chart-fit"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="border-top my-4"></div>
+                                <h4 class="card-title">Income by department</h4>
+                                <div class="row">
+                                  <div class="col-12 col-md-3">
+                                    <span>FCBK: <b>$1,475</b></span>
+                                    <div class="progress my-3" style="height: 4px;">
+                                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                    <span>GGL: <b>$23,475</b></span>
+                                    <div class="progress my-3" style="height: 4px;">
+                                      <div class="progress-bar bg-success" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                    <span>APL: <b>$1,658</b></span>
+                                    <div class="progress my-3" style="height: 4px;">
+                                      <div class="progress-bar bg-danger" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-md-3">
+                                    <span>SMG: <b>$12,489</b></span>
+                                    <div class="progress my-3" style="height: 4px;">
+                                      <div class="progress-bar bg-info" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                            </div>
+                          <div class="row">
+                            <div class="col-xxl-8 m-b-30">
+                              <div class="card card-statistics mb-0 h-100">
+                                <div class="card-header">
+                                  <h4 class="card-title">Our Investment Trend</h4>
+                                </div>
+                                <div class="card-body pt-0">
+                                  <div class="apexchart-wrapper">
+                                    <div id="stockmarketdemo8" class="chart-fit"></div>
+                                  </div>
+                                  <div class="apexchart-wrapper">
+                                    <div id="stockmarketdemo8bottom" class="chart-fit"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="col-xxl-4 m-b-30">
+                              <div class="card card-statistics h-100 mb-0">
+                                <div class="card-header d-flex justify-content-between">
+                                  <div class="card-heading">
+                                    <h4 class="card-title">Investments</h4>
+                                  </div>
+                                  <div class="dropdown">
+                                    <select class="custom-select custom-select-sm" id="inputGroupSelect01">
+                                      <option selected>Last 24hr</option>
+                                      <option value="1">Last week</option>
+                                      <option value="2">Last 6 month</option>
+                                      <option value="3">Last year</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <div class="border-bottom pb-2 pb-xxs-4">
+                                    <div class="row">
+                                      <div class="col-xxs-6 mb-3 mb-xxs-0">
+                                        <span class="font-17">Total revenue</span>
+                                        <h3 class="mt-1 mb-1">$45,541</h3>
+                                        <span class="d-block"> <i class="fa fa-arrow-up text-primary"></i> <b class="text-primary">+23%</b> Vs last months </span>
+                                      </div>
+                                      <div class="col-xxs-6 mb-3 mb-xxs-0">
+                                        <span class="font-17">Total cost</span>
+                                        <h3 class="mt-1 mb-1">$6,456</h3>
+                                        <span class="d-block"> <i class="fa fa-arrow-down text-cyan"></i> <b class="text-cyan">+65%</b> Vs last months </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xxs-6 pt-2 pt-xxs-4">
+                                      <div class="d-flex justify-content-between">
+                                        <span class="font-16"><b>86</b> Deals added</span>
+                                        <span class="font-16"><b>65%</b> of goal</span>
+                                      </div>
+                                      <div class="progress my-3" style="height: 6px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxs-6 pt-2 pt-xxs-4">
+                                      <div class="d-flex justify-content-between">
+                                        <span class="font-16"><b>78</b> Project closed</span>
+                                        <span class="font-16"><b>45%</b> of goal</span>
+                                      </div>
+                                      <div class="progress my-3" style="height: 6px;">
+                                        <div class="progress-bar bg-cyan" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="apexchart-wrapper">
+                                    <div id="analytics3" class="chart-fit"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Chart Scripts -->
+                          <script>
+                            // Income Analysis Bar Chart
+                            new ApexCharts(document.querySelector("#analytics2"), {
+                              chart: { type: 'bar', height: 180 },
+                              series: [{ name: 'Sessions', data: [300, 400, 300, 500, 490, 600, 700] }],
+                              xaxis: { categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] },
+                              colors: ['#556ee6']
+                            }).render();
+                          
+                            // Investment Trend Line Chart
+                            new ApexCharts(document.querySelector("#stockmarketdemo8"), {
+                              chart: { type: 'line', height: 200 },
+                              series: [{ name: 'Investment', data: [10, 41, 35, 51, 49, 62, 69] }],
+                              xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] },
+                              colors: ['#34c38f']
+                            }).render();
+                          
+                            // Investment Trend Area Chart
+                            new ApexCharts(document.querySelector("#stockmarketdemo8bottom"), {
+                              chart: { type: 'area', height: 200 },
+                              series: [{ name: 'Growth', data: [20, 35, 50, 30, 60, 70, 90] }],
+                              xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'] },
+                              colors: ['#f46a6a']
+                            }).render();
+                          
+                            // Investments Radial Chart
+                            new ApexCharts(document.querySelector("#analytics3"), {
+                              chart: { type: 'radialBar', height: 280 },
+                              series: [65, 45],
+                              labels: ['Deals Added', 'Projects Closed'],
+                              colors: ['#556ee6', '#34c38f']
+                            }).render();
+                          </script>
+                        
+                        <div class="row">
+                        <div class="col-xxl-8 m-b-30">
+                                <div class="card card-statistics h-100 mb-0">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Our Top Brokers</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless mb-0">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th scope="col">Broker</th>
+                                                        <th scope="col">Date (Period)</th>
+                                                        <th scope="col">Sale</th>
+                                                        <th scope="col">KPI vs Target</th>
+                                                        <th scope="col">Target</th>
+                                                        <th scope="col">% change</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Smith Drake </td>
+                                                        <td>12/07/2024 </td>
+                                                        <td>64.163,40 </td>
+                                                        <td>58.875,49 </td>
+                                                        <td>$12.546,45 </td>
+                                                        <td>18%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vanessa Angel </td>
+                                                        <td>17/05/2024 </td>
+                                                        <td>58.875,49 </td>
+                                                        <td>64.163,40 </td>
+                                                        <td>$45.656,12 </td>
+                                                        <td>20% </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacon Francis </td>
+                                                        <td>07/12/2023 </td>
+                                                        <td>64.163,40</td>
+                                                        <td>58.875,49 </td>
+                                                        <td>$89.564,53 </td>
+                                                        <td>12.5% </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Albom Mitch </td>
+                                                        <td>11/02/2024 </td>
+                                                        <td>64.163,40</td>
+                                                        <td>70.007,90 </td>
+                                                        <td>$65.456,45 </td>
+                                                        <td>16% </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fenish Paul </td>
+                                                        <td>01/07/2024 </td>
+                                                        <td>$58.875,49 </td>
+                                                        <td>64.163,40 </td>
+                                                        <td>$78.565,56 </td>
+                                                        <td>6% </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Martha Doe </td>
+                                                        <td>05/05/2024 </td>
+                                                        <td>64.163,40</td>
+                                                        <td>$58.875,4 </td>
+                                                        <td>$65.456,54 </td>
+                                                        <td>17% </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-xxl-4 m-b-30">
+                                <div class="card card-statistics h-100 mb-0 o-hidden">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Our Statistics</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6 col-xxs-4 col-md-4 mb-3 mb-sm-0">
+                                                <h3 class="mb-1 mb-xxs-0">25,456</h3>
+                                                <span class="d-block"> <i class="fa fa-arrow-up text-success"></i> <b class="text-success">+23%</b> Last 24hr  </span>
+                                            </div>
+                                            <div class="col-6 col-xxs-4 col-md-4 mb-3 mb-sm-0">
+                                                <h3 class="mb-1 mb-xxs-0">45,541</h3>
+                                                <span class="d-block"> <i class="fa fa-arrow-up text-success"></i> <b class="text-success">+15%</b> Last week </span>
+                                            </div>
+                                            <div class="col-12 col-xxs-4 col-md-4 mb-3 mb-sm-0">
+                                                <h3 class="mb-1 mb-xxs-0">78,462</h3>
+                                                <span class="d-block"> <i class="fa fa-arrow-up text-success"></i> <b class="text-success">+32%</b> Last 6 month </span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mt-xxs-4">
+                                            <p>Projections <span class="badge badge-success-inverse">+23% today</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="tab nav-border-bottom">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2 active show" id="home-02-tab" data-toggle="tab" href="#home-02" role="tab" aria-controls="home-02" aria-selected="true">Last 24hr</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2" id="profile-02-tab" data-toggle="tab" href="#profile-02" role="tab" aria-controls="profile-02" aria-selected="false">Last week </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link py-2" id="portfolio-02-tab" data-toggle="tab" href="#portfolio-02" role="tab" aria-controls="portfolio-02" aria-selected="false">Last month </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content mt-5">
+                                                <div class="tab-pane fade active show" id="home-02" role="tabpanel" aria-labelledby="home-02-tab">
+                                                    <div class="apexchart-wrapper">
+                                                        <div id="analytics4" class="chart-fit mb-minus"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="profile-02" role="tabpanel" aria-labelledby="profile-02-tab">
+                                                    <div class="apexchart-wrapper">
+                                                        <div id="analytics5" class="chart-fit mb-minus"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="portfolio-02" role="tabpanel" aria-labelledby="portfolio-02-tab">
+                                                    <div class="apexchart-wrapper">
+                                                        <div id="analytics6" class="chart-fit mb-minus"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                // Chart for "Last 24hr"
+                                var options4 = {
+                                    chart: {
+                                        type: 'line', // Or choose the appropriate chart type
+                                        height: 350
+                                    },
+                                    series: [{
+                                        name: 'Data Series 1',
+                                        data: [10, 20, 15, 30, 40, 35, 50]
+                                    }],
+                                    xaxis: {
+                                        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                                    }
+                                };
+                            
+                                var chart4 = new ApexCharts(document.querySelector("#analytics4"), options4);
+                                chart4.render();
+                            
+                                // Chart for "Last week"
+                                var options5 = {
+                                    chart: {
+                                        type: 'bar', // Example bar chart
+                                        height: 350
+                                    },
+                                    series: [{
+                                        name: 'Revenue',
+                                        data: [400, 500, 300, 700, 600, 800, 950]
+                                    }],
+                                    xaxis: {
+                                        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                                    }
+                                };
+                            
+                                var chart5 = new ApexCharts(document.querySelector("#analytics5"), options5);
+                                chart5.render();
+                            
+                                // Chart for "Last month"
+                                var options6 = {
+                                    chart: {
+                                        type: 'area', // Example area chart
+                                        height: 350
+                                    },
+                                    series: [{
+                                        name: 'Total Sales',
+                                        data: [1500, 1200, 1800, 2000, 2500, 2200, 2700, 3000, 3200, 2900, 2800, 3500]
+                                    }],
+                                    xaxis: {
+                                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                                    }
+                                };
+                            
+                                var chart6 = new ApexCharts(document.querySelector("#analytics6"), options6);
+                                chart6.render();
+                            </script>
+
+
+                        <!-- <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card card-statistics">
+                                    <div class="card-header">
+                                        <div class="card-heading">
+                                            <h4 class="card-title">Investment Calendar</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                            <div class="card card-statistics h-100 mb-0">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Top Buyers</h4>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="apexchart-wrapper">
+                                            <div id="stockmarket6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="event-calendar">
+                                                    <div id="event-calendar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- end row -->
+                        <!-- event Modal -->
+                        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="verticalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="verticalCenterTitle">Add New Event</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="modelemail">Investment Name</label>
+                                                <input type="email" class="form-control" id="modelemail">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Choose Color (For Reference Purposes only)</label>
+                                                <select class="form-control">
+                                                    <option>Bg-Purple</option>
+                                                    <option>Bg-Orange</option>
+                                                    <option>Bg-Green</option>
+                                                    <option>Bg-Red</option>
+                                                </select> 
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+                <!-- end app-main -->
+            </div>
+            <!-- end app-container -->
+           
+ <!-- begin footer -->
+ 
+ <!-- Smartsupp Live Chat script -->
+<!-- Smartsupp Live Chat script -->
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'd538ae6e56eeacbd01801610e407372e8bc1d888';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+ <footer class="footer">
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-center text-sm-left">
+                        <p>&copy; Copyright <script>document.write(new Date().getFullYear());</script>. All rights reserved.</p>
+                    </div>
+                    <div class="col  col-sm-6 ml-sm-auto text-center text-sm-right">
+                        <p><i class="fa fa-bar-chart-o text-primary mx-1"></i> Bullagetrade Tech Team</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+<!-- plugins -->
+<script src="assets/js/vendors.js"></script>
+
+<!-- custom app -->
+<script src="./test_files/app.js.download"></script>
+
+
+<!-- SweetAlert app -->
+<script src="js/lib/sweetalert/sweetalert.min.js"></script>
+
+<script src="js/lib/jquery.min.js"></script>
+    
+<!-- Table app -->
+<script src="my_js.js"></script>
+
+
+    
+</body>
+
+</html><html>
+ 
+</html> 

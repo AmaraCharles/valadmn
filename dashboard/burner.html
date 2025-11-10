@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Widget Slider</title>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      padding: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+    }
+
+    .owl-carousel .item {
+      padding: 10px;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card card-statistics">
+      <div class="card-body">
+        <div class="owl-carousel owl-theme">
+          <!-- TradingView iframes -->
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:SHOP&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:WMT&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:JPM&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:DIS&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:XOM&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:AMC&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NASDAQ:ABNB&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:KO&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:T&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:BA&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NASDAQ:SBUX&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:DELL&locale=en&colorTheme=light"></iframe>
+          </div>
+          <div class="item">
+            <iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NYSE:NKE&locale=en&colorTheme=light"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery and Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        768: { items: 3 },
+        992: { items: 4 },
+        1200: { items: 5 }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
