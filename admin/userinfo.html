@@ -1294,7 +1294,7 @@ $(document).ready(async function () {
 
   const response = await $.ajax({
     type: "GET",
-    url: `https://bullage-server.onrender.com/users/${parsedData}`,
+    url: `https://bullage-server.onrender.com/users/emailz/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
@@ -1407,7 +1407,7 @@ async function fetchUserInfo() {
 
   const response = await $.ajax({
     type: "GET",
-    url: `https://bullage-server.onrender.com/users/${parsedData}`,
+    url: `https://bullage-server.onrender.com/users/emailz/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
