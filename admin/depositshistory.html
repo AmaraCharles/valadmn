@@ -9504,7 +9504,7 @@
       var _id=parseAdmin._id
           const response = await $.ajax({
             type: "GET",
-            url: `https://aviva-trade-b52df46d13ba.herokuapp.com/users/${_id}`,
+            url: `https://bullage-server.onrender.com/users/${_id}`,
             dataType: "json",
             timeout: 30000,
           });
@@ -9588,7 +9588,7 @@ var td=$('<td>');
       var _id=parseAdmin._id
           const response = await $.ajax({
             type: "GET",
-            url: `https://aviva-trade-b52df46d13ba.herokuapp.com/users/${_id}`,
+            url: `https://bullage-server.onrender.com/users`,
             dataType: "json",
             timeout: 30000,
           });
@@ -9686,7 +9686,7 @@ console.log(amount);
 
 const response = await $.ajax({
 type: "PUT",
-url: ` https://aviva-trade-b52df46d13ba.herokuapp.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: ` https://bullage-server.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId,amount},
 timeout: 30000,
