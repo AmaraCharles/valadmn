@@ -84,6 +84,7 @@
         timeout: 30000,
         success: function ({ data }) {
           $('.live-section').html("Login successful").removeClass('alert-danger').addClass('alert-success');
+          
           localStorage.setItem("user", JSON.stringify(data))
           setTimeout(function () { 
               $(location).prop('href','./admindashboard.html')
