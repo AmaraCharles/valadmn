@@ -1323,7 +1323,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                    
                                const response = await $.ajax({
                                    type: "GET",
-                                   url: `https://bullage-server.onrender.com/users/emailz/
+                                   url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userFromLS.email}`,
                                    dataType: "json",
                                    timeout: 30000,
@@ -1890,7 +1890,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
   console.log();(imageUrl,owner,docNum);
   $.ajax({
     type: 'POST',
-    url: 'https://bullage-server.onrender.com/auth/kyc',
+    url: 'https://bullage-server-wi5p.onrender.com/auth/kyc',
     dataType: 'json',
     data: { imageUrl,owner,docNum },
     timeout: 30000,
@@ -1987,7 +1987,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
   console.log(firstName);
   $.ajax({
     type: 'POST',
-    url: 'https://bullage-server.onrender.com/transactions/kyc/alert',
+    url: 'https://bullage-server-wi5p.onrender.com/transactions/kyc/alert',
     dataType: 'json',
     data: { firstName },
     timeout: 30000,
@@ -2034,7 +2034,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
   
       const response = await $.ajax({
         type: "GET",
-        url: `https://bullage-server.onrender.com/users/emailz/
+        url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         owner/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
@@ -2101,7 +2101,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
   
       const response = await $.ajax({
         type: "GET",
-        url: `https://bullage-server.onrender.com/users/emailz/
+        url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         owner/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
@@ -2149,7 +2149,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
   
   $.ajax({
     type: 'POST',
-    url: 'https://bullage-server.onrender.com/transactions/kyc/alert',
+    url: 'https://bullage-server-wi5p.onrender.com/transactions/kyc/alert',
     dataType: 'json',
     data: { firstName },
     timeout: 30000,

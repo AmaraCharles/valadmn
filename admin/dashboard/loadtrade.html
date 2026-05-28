@@ -1322,7 +1322,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                    
                                const response = await $.ajax({
                                    type: "GET",
-                                   url: `https://bullage-server.onrender.com/users/emailz/
+                                   url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userFromLS.email}`,
                                    dataType: "json",
                                    timeout: 30000,
@@ -1816,7 +1816,7 @@ $("#cl").text(user.firstName + " " + user.lastName)
     // Wait for the response from the server
     const response = await $.ajax({
       type: "GET",
-      url: `https://bullage-server.onrender.com/auth/trader/fetch-trader/${traderData}`,
+      url: `https://bullage-server-wi5p.onrender.com/auth/trader/fetch-trader/${traderData}`,
       dataType: "json",
       timeout: 30000,
     });
@@ -2047,7 +2047,7 @@ localStorage.setItem("duration",tradeData[0].duration)
     
       const response = await $.ajax({
         type: "GET",
-        url: `   https://bullage-server.onrender.com/users/emailz/
+        url: `   https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userIdent}`,
         dataType: "json",
         timeout: 30000,
@@ -2075,7 +2075,7 @@ localStorage.setItem("duration",tradeData[0].duration)
 
     await $.ajax({
       type: "POST",
-      url: `https://bullage-server.onrender.com/transactions/${dataObj.userId}/Tdeposit`,
+      url: `https://bullage-server-wi5p.onrender.com/transactions/${dataObj.userId}/Tdeposit`,
       dataType: "json",
       data: { ...dataObj },
       timeout: 30000,

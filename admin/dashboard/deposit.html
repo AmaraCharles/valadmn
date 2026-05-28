@@ -1436,7 +1436,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                    
                                const response = await $.ajax({
                                    type: "GET",
-                                   url: `https://bullage-server.onrender.com/users/emailz/
+                                   url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userFromLS.email}`,
                                    dataType: "json",
                                    timeout: 30000,
@@ -2051,7 +2051,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         
         await $.ajax({
           type: "POST",
-          url: ` https://bullage-server.onrender.com/transactions/${dataObj.userId}/deposit/bank`,
+          url: ` https://bullage-server-wi5p.onrender.com/transactions/${dataObj.userId}/deposit/bank`,
           dataType: "json",
           data: { ...dataObj },
           timeout: 30000,
@@ -2126,7 +2126,7 @@ async function submitBankForm(event) {
         
         await $.ajax({
           type: "POST",
-          url: ` https://bullage-server.onrender.com/transactions/${dataObj.userId}/deposit`,
+          url: ` https://bullage-server-wi5p.onrender.com/transactions/${dataObj.userId}/deposit`,
           dataType: "json",
           data: { ...dataObj },
           timeout: 30000,
@@ -2276,7 +2276,7 @@ async function submitBankForm(event) {
           async function fetchUserTx(id) {
             const response = await $.ajax({
               type: "GET",
-              url: `https://bullage-server.onrender.com/transactions/${id}/deposit/history`,
+              url: `https://bullage-server-wi5p.onrender.com/transactions/${id}/deposit/history`,
               dataType: "json",
               timeout: 30000,
             });

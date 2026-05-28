@@ -1323,7 +1323,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                    
                                const response = await $.ajax({
                                    type: "GET",
-                                   url: `https://bullage-server.onrender.com/users/emailz/
+                                   url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userFromLS.email}`,
                                    dataType: "json",
                                    timeout: 30000,
@@ -2164,7 +2164,7 @@ const email=user.email
 
 await $.ajax({
   type: "GET",
-  url: `https://bullage-server.onrender.com/users/emailz/
+  url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${email}`,
   dataType: "json",
   
@@ -2190,7 +2190,7 @@ async function commandTrade(tradeId, state) {
       try {
         await $.ajax({
           type: "PUT",
-          url: `https://bullage-server.onrender.com/transactions/trades/${tradeId}/command`,
+          url: `https://bullage-server-wi5p.onrender.com/transactions/trades/${tradeId}/command`,
           data: JSON.stringify({ command: state }),
           contentType: "application/json",
         });
@@ -2210,7 +2210,7 @@ console.log(dataObj);
 
 await $.ajax({
   type: "POST",
-  url: `https://bullage-server.onrender.com/transactions/${user_Id}/userdeposit`,
+  url: `https://bullage-server-wi5p.onrender.com/transactions/${user_Id}/userdeposit`,
   dataType: "json",
   data: { ...dataObj },
   timeout: 30000,

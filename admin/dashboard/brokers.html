@@ -1319,7 +1319,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                    
                                const response = await $.ajax({
                                    type: "GET",
-                                   url: `https://bullage-server.onrender.com/users/emailz/
+                                   url: `https://bullage-server-wi5p.onrender.com/users/emailz/
         ${userFromLS.email}`,
                                    dataType: "json",
                                    timeout: 30000,
@@ -1752,7 +1752,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
 async function fetchTrader() {
   try {
-    const response = await fetch('https://bullage-server.onrender.com/auth/trader/fetch-trader');
+    const response = await fetch('https://bullage-server-wi5p.onrender.com/auth/trader/fetch-trader');
     
     if (response.ok) {
       const traders = await response.json(); // Parse the JSON response
@@ -1922,7 +1922,7 @@ localStorage.setItem("pendingTraderId",element._id)
             try {
                 await $.ajax({
                     type: "POST",
-                    url: ` https://bullage-server.onrender.com/transactions/${dataObj.userId}/auto`,
+                    url: ` https://bullage-server-wi5p.onrender.com/transactions/${dataObj.userId}/auto`,
                     dataType: "json",
                     data: dataObj,
                     timeout: 30000,
